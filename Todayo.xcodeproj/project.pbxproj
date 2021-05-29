@@ -15,6 +15,12 @@
 		9238C94826627B8C00F7AFA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9238C94626627B8C00F7AFA0 /* LaunchScreen.storyboard */; };
 		9238C95326627B8C00F7AFA0 /* TodayoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C95226627B8C00F7AFA0 /* TodayoTests.swift */; };
 		9238C95E26627B8C00F7AFA0 /* TodayoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C95D26627B8C00F7AFA0 /* TodayoUITests.swift */; };
+		9238C96E26627BE800F7AFA0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C96D26627BE800F7AFA0 /* Database.swift */; };
+		9238C97026627C1600F7AFA0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C96F26627C1600F7AFA0 /* LoginController.swift */; };
+		9238C97226627C5100F7AFA0 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C97126627C5100F7AFA0 /* SignupController.swift */; };
+		9238C97426627F1E00F7AFA0 /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */; };
+		9238C9762662844B00F7AFA0 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C9752662844B00F7AFA0 /* TaskController.swift */; };
+		9238C9782662866600F7AFA0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C9772662866600F7AFA0 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		9238C95926627B8C00F7AFA0 /* TodayoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9238C95D26627B8C00F7AFA0 /* TodayoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayoUITests.swift; sourceTree = "<group>"; };
 		9238C95F26627B8C00F7AFA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9238C96D26627BE800F7AFA0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9238C96F26627C1600F7AFA0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		9238C97126627C5100F7AFA0 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
+		9238C9752662844B00F7AFA0 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		9238C9772662866600F7AFA0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,12 @@
 				9238C94426627B8C00F7AFA0 /* Assets.xcassets */,
 				9238C94626627B8C00F7AFA0 /* LaunchScreen.storyboard */,
 				9238C94926627B8C00F7AFA0 /* Info.plist */,
+				9238C96D26627BE800F7AFA0 /* Database.swift */,
+				9238C96F26627C1600F7AFA0 /* LoginController.swift */,
+				9238C97126627C5100F7AFA0 /* SignupController.swift */,
+				9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */,
+				9238C9752662844B00F7AFA0 /* TaskController.swift */,
+				9238C9772662866600F7AFA0 /* Todo.swift */,
 			);
 			path = Todayo;
 			sourceTree = "<group>";
@@ -195,6 +213,7 @@
 				TargetAttributes = {
 					9238C93726627B8B00F7AFA0 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					9238C94D26627B8C00F7AFA0 = {
 						CreatedOnToolsVersion = 12.5;
@@ -234,6 +253,7 @@
 				9238C94826627B8C00F7AFA0 /* LaunchScreen.storyboard in Resources */,
 				9238C94526627B8C00F7AFA0 /* Assets.xcassets in Resources */,
 				9238C94326627B8B00F7AFA0 /* Main.storyboard in Resources */,
+				9238C97426627F1E00F7AFA0 /* LoggedIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9238C9762662844B00F7AFA0 /* TaskController.swift in Sources */,
 				9238C94026627B8B00F7AFA0 /* ViewController.swift in Sources */,
 				9238C93C26627B8B00F7AFA0 /* AppDelegate.swift in Sources */,
+				9238C9782662866600F7AFA0 /* Todo.swift in Sources */,
+				9238C96E26627BE800F7AFA0 /* Database.swift in Sources */,
+				9238C97226627C5100F7AFA0 /* SignupController.swift in Sources */,
 				9238C93E26627B8B00F7AFA0 /* SceneDelegate.swift in Sources */,
+				9238C97026627C1600F7AFA0 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Todayo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.denisaneacsu.Todayo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Todayo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
