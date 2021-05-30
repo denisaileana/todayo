@@ -29,7 +29,7 @@ class Database{
             print("Eroare la crearea tabelului \(errmsg)")
         }
         //creare tabel task-uri
-        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS task (id INTEGER PRIMARY KEY AUTOINCREMENT, id_user INTEGER, task TEXT, completed TINYINT(1), due DATE, create_lat DECIMAL, create_long DECIMAL); INSERT INTO task VALUES (null, 1, 'de cumparat legume', 0, '2021-10-31', 0, 0)", nil, nil, nil) != SQLITE_OK {
+        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS task (id INTEGER PRIMARY KEY AUTOINCREMENT, id_user INTEGER, task TEXT, completed TINYINT(1), due DATE, create_lat DECIMAL, create_long DECIMAL)", nil, nil, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("Eroare la crearea tabelului \(errmsg)")
         }

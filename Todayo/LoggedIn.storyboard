@@ -8,33 +8,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Add Task-->
         <scene sceneID="fZc-GP-e7t">
             <objects>
-                <viewController id="jYB-Nz-gwV" sceneMemberID="viewController">
+                <viewController title="Add Task" id="jYB-Nz-gwV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGJ-1V-Y4S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DYn-zx-V5d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TeW-cO-AYf"/>
+                    <tabBarItem key="tabBarItem" title="Add Task" id="TeW-cO-AYf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deX-qO-AT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510" y="248"/>
         </scene>
-        <!--Item-->
+        <!--User Profile-->
         <scene sceneID="DPv-gM-2Mp">
             <objects>
-                <viewController id="u1b-Xd-OvO" sceneMemberID="viewController">
+                <viewController title="User Profile" id="u1b-Xd-OvO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bG5-vA-OBB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xSm-bw-Nb4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="kgc-ss-Hdf"/>
+                    <tabBarItem key="tabBarItem" title="User Profile" id="kgc-ss-Hdf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfh-WF-TkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,19 +50,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="jYB-Nz-gwV" kind="relationship" relationship="viewControllers" id="x7a-9p-YTe"/>
-                        <segue destination="u1b-Xd-OvO" kind="relationship" relationship="viewControllers" id="zoi-iD-bVw"/>
                         <segue destination="C7O-93-GOM" kind="relationship" relationship="viewControllers" id="mG3-l4-iMZ"/>
+                        <segue destination="jYB-Nz-gwV" kind="relationship" relationship="viewControllers" id="8Wg-Ls-Z5m"/>
+                        <segue destination="u1b-Xd-OvO" kind="relationship" relationship="viewControllers" id="hpF-ks-OiU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIJ-s1-GT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-412" y="-30"/>
         </scene>
-        <!--Item-->
+        <!--View Tasks-->
         <scene sceneID="yu3-2D-EyD">
             <objects>
-                <tableViewController id="C7O-93-GOM" customClass="TaskController" customModule="Todayo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="View Tasks" id="C7O-93-GOM" customClass="TaskController" customModule="Todayo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j5W-B0-LWF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                             <outlet property="delegate" destination="C7O-93-GOM" id="HZU-06-ee3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="nDF-Io-bC5"/>
+                    <tabBarItem key="tabBarItem" title="View Tasks" id="nDF-Io-bC5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYX-BI-KLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
