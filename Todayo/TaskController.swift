@@ -70,4 +70,50 @@ class TaskController: UITableViewController {
     override func viewDidLoad() {
         readValues()
     }
+    
+    func deleteValue(indexPath: IndexPath){
+        
+        print("\(indexPath)")
+        //facem un statement
+        var statement: OpaquePointer?
+
+        //query-ul pentru inserarea utilizatorului
+        let queryString1 = "DELETE FROM task WHERE id=?"
+
+        //pregatim query-ul
+        if sqlite3_prepare(Database.shared.db, queryString1, -1, &statement, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
+            print("Am esuat la pregatirea stergerii \(errmsg)")
+            return
+        }
+
+        //bind-uim parametrii de "?"
+        if sqlite3_bind_int(statement, 1, Int32(todolist[indexPath.row].id)) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
+            print("Am esuat la bindingul id-ului: \(errmsg)")
+            return
+        }
+
+        //executam query-ul de inserare
+        if sqlite3_step(statement) != SQLITE_DONE{
+            let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
+            print("Am esuat la stergere: \(errmsg)")
+            return
+        }
+        
+        readValues()
+    }
+    
+    
+    //configurare optiune stanga
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Done", handler: {
+            [weak self](action, view, completionhandler) in
+            self?.deleteValue(indexPath: indexPath)
+            completionhandler(true)
+        })
+        action.backgroundColor = .init(red: 0.2, green: 0.7, blue: 0, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
 }
