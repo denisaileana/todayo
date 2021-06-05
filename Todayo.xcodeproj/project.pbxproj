@@ -21,6 +21,7 @@
 		9238C97426627F1E00F7AFA0 /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */; };
 		9238C9762662844B00F7AFA0 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C9752662844B00F7AFA0 /* TaskController.swift */; };
 		9238C9782662866600F7AFA0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C9772662866600F7AFA0 /* Todo.swift */; };
+		927CC560266B875A000FE3E2 /* AddtaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC55F266B875A000FE3E2 /* AddtaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
 		9238C9752662844B00F7AFA0 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9238C9772662866600F7AFA0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		927CC55F266B875A000FE3E2 /* AddtaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				9238C96F26627C1600F7AFA0 /* LoginController.swift */,
 				9238C97126627C5100F7AFA0 /* SignupController.swift */,
 				9238C97326627F1E00F7AFA0 /* LoggedIn.storyboard */,
+				927CC55F266B875A000FE3E2 /* AddtaskController.swift */,
 				9238C9752662844B00F7AFA0 /* TaskController.swift */,
 				9238C9772662866600F7AFA0 /* Todo.swift */,
 			);
@@ -286,6 +289,7 @@
 				9238C97226627C5100F7AFA0 /* SignupController.swift in Sources */,
 				9238C93E26627B8B00F7AFA0 /* SceneDelegate.swift in Sources */,
 				9238C97026627C1600F7AFA0 /* LoginController.swift in Sources */,
+				927CC560266B875A000FE3E2 /* AddtaskController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

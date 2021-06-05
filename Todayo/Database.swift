@@ -15,6 +15,7 @@ class Database{
     private init(){}
     //avem nevoie de un obiect opaquepointer ca sa putem deschide baza de date
     public var db: OpaquePointer?
+    public var id_user: Int32?
     public func conecteaza(){
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Todayo.sqlite")
 

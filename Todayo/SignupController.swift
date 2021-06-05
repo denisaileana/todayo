@@ -97,6 +97,8 @@ class SignupController: UIViewController {
 
         //punem pe display un mesaj de succes
         print("User salvat cu succes!")
+        
+        Database.shared.id_user = Int32(sqlite3_last_insert_rowid(Database.shared.db))
 
         //pentru storyboard-ul de loggedin
         let storyboard = UIStoryboard(name: "LoggedIn", bundle: nil)

@@ -38,7 +38,7 @@ class LoginController: UIViewController {
         var statement: OpaquePointer?
 
         //query-ul pentru inserarea utilizatorului
-        let queryString1 = "SELECT * from user WHERE email = ? AND parola = ?"
+        let queryString1 = "SELECT id from user WHERE email = ? AND parola = ?"
 
         //pregatim query-ul
         if sqlite3_prepare(Database.shared.db, queryString1, -1, &statement, nil) != SQLITE_OK{
@@ -64,7 +64,10 @@ class LoginController: UIViewController {
         print("rezultat \(rezultat) (row: \(SQLITE_ROW)) (done: \(SQLITE_DONE))")
         if (rezultat == SQLITE_ROW) {
             print("test")
-
+            
+            let id_user = sqlite3_column_int(statement, 0)
+            Database.shared.id_user = id_user
+            
             //pentru storyboard-ul de loggedin
             let storyboard = UIStoryboard(name: "LoggedIn", bundle: nil)
             let ecran = storyboard.instantiateInitialViewController()!
