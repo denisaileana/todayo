@@ -25,7 +25,7 @@ class Database{
         }
 
         //creare tabel user
-        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, nume TEXT, prenume TEXT, email EMAIL, parola TEXT); INSERT INTO user (nume, prenume, email, parola) VALUES ('admin', 'admin', 'admin@gmail.com', 'admin123')", nil, nil, nil) != SQLITE_OK {
+        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, nume TEXT, prenume TEXT, email EMAIL, parola TEXT, imagine TEXT);", nil, nil, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("Eroare la crearea tabelului \(errmsg)")
         }

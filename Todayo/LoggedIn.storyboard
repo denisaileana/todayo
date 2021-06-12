@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,7 +82,7 @@
         <!--User Profile-->
         <scene sceneID="DPv-gM-2Mp">
             <objects>
-                <viewController title="User Profile" id="u1b-Xd-OvO" sceneMemberID="viewController">
+                <viewController title="User Profile" id="u1b-Xd-OvO" customClass="ProfileController" customModule="Todayo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bG5-vA-OBB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +108,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-wF-Num">
+                                <rect key="frame" x="342.5" y="527" width="21.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="edituserimg:" destination="u1b-Xd-OvO" eventType="touchUpInside" id="W4c-Px-clH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xSm-bw-Nb4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,19 +133,26 @@
                             <constraint firstItem="xSm-bw-Nb4" firstAttribute="trailing" secondItem="NsL-yL-hpu" secondAttribute="trailing" constant="100" id="HmI-km-Lyf"/>
                             <constraint firstItem="NsL-yL-hpu" firstAttribute="centerX" secondItem="bG5-vA-OBB" secondAttribute="centerX" id="JkT-5f-M8N"/>
                             <constraint firstItem="EdS-82-pLh" firstAttribute="top" secondItem="fpb-dp-6V0" secondAttribute="bottom" constant="50" id="ME7-F2-J6v"/>
+                            <constraint firstItem="PSw-wF-Num" firstAttribute="bottom" secondItem="EdS-82-pLh" secondAttribute="bottom" id="Uma-yn-BhL"/>
                             <constraint firstItem="NsL-yL-hpu" firstAttribute="top" secondItem="wD8-2N-hof" secondAttribute="bottom" constant="30" id="gmz-nS-yb0"/>
                             <constraint firstItem="NsL-yL-hpu" firstAttribute="leading" secondItem="xSm-bw-Nb4" secondAttribute="leading" constant="100" id="hp5-xY-vWu"/>
                             <constraint firstItem="xSm-bw-Nb4" firstAttribute="bottom" secondItem="NsL-yL-hpu" secondAttribute="bottom" constant="100" id="jhi-UY-i1t"/>
+                            <constraint firstItem="PSw-wF-Num" firstAttribute="trailing" secondItem="EdS-82-pLh" secondAttribute="trailing" id="mUH-gj-4z8"/>
                             <constraint firstItem="wD8-2N-hof" firstAttribute="top" secondItem="EdS-82-pLh" secondAttribute="bottom" constant="50" id="vNE-2W-glN"/>
                             <constraint firstItem="fpb-dp-6V0" firstAttribute="top" secondItem="xSm-bw-Nb4" secondAttribute="top" constant="50" id="vOa-tE-W6k"/>
                             <constraint firstItem="fpb-dp-6V0" firstAttribute="centerX" secondItem="bG5-vA-OBB" secondAttribute="centerX" id="vV8-2l-dMW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Profile" id="kgc-ss-Hdf"/>
+                    <connections>
+                        <outlet property="userimg" destination="EdS-82-pLh" id="UmG-Hh-Xap"/>
+                        <outlet property="usernume" destination="wD8-2N-hof" id="mWl-jY-9Ez"/>
+                        <outlet property="userprenume" destination="NsL-yL-hpu" id="oSX-my-NXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfh-WF-TkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="699"/>
+            <point key="canvasLocation" x="-413.04347826086962" y="698.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Ae-0k-suW">
@@ -180,6 +198,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="View Tasks" id="nDF-Io-bC5"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="VcI-YH-guc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Refresh">
@@ -198,6 +217,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
