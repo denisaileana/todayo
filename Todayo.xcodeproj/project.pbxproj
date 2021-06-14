@@ -23,6 +23,7 @@
 		9238C9782662866600F7AFA0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C9772662866600F7AFA0 /* Todo.swift */; };
 		927CC560266B875A000FE3E2 /* AddtaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC55F266B875A000FE3E2 /* AddtaskController.swift */; };
 		927CC5622674C28D000FE3E2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC5612674C28D000FE3E2 /* ProfileController.swift */; };
+		92F8FA7F2677D3E800CD0FFB /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8FA7E2677D3E800CD0FFB /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9238C9772662866600F7AFA0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		927CC55F266B875A000FE3E2 /* AddtaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtaskController.swift; sourceTree = "<group>"; };
 		927CC5612674C28D000FE3E2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		92F8FA7E2677D3E800CD0FFB /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F8FA7F2677D3E800CD0FFB /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 				9238C95126627B8C00F7AFA0 /* TodayoTests */,
 				9238C95C26627B8C00F7AFA0 /* TodayoUITests */,
 				9238C93926627B8B00F7AFA0 /* Products */,
+				92F8FA7D2677D3E800CD0FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +154,14 @@
 				9238C95F26627B8C00F7AFA0 /* Info.plist */,
 			);
 			path = TodayoUITests;
+			sourceTree = "<group>";
+		};
+		92F8FA7D2677D3E800CD0FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92F8FA7E2677D3E800CD0FFB /* SafariServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,6 +7,7 @@
 
 import UIKit
 import SQLite3
+import SafariServices
 
 class TaskController: UITableViewController {
     
@@ -80,6 +81,19 @@ class TaskController: UITableViewController {
         return todolist.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todolist[indexPath.row].task
+        if todo.range(of: "^https?://.+$", options: .regularExpression, range: nil, locale: nil) == nil{
+            return
+        }
+        if let url = URL(string: todo){
+            let safarivc = SFSafariViewController(url: url)
+            self.present(safarivc, animated: true, completion: nil)
+        }
+    }
+    
+    
+    //desenare cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //instanta celulei
         let todoCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)

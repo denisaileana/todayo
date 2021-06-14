@@ -48,7 +48,8 @@ class AddtaskController: UIViewController {
             return
         }
 
-        if sqlite3_bind_text(statement, 2, taskname, -1, nil) != SQLITE_OK{
+        let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
+        if sqlite3_bind_text(statement, 2, taskname, -1, SQLITE_TRANSIENT) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul taskname-ului: \(errmsg)")
             return
@@ -58,7 +59,8 @@ class AddtaskController: UIViewController {
             print("Am esuat la bindingul completed: \(errmsg)")
             return
         }
-        if sqlite3_bind_text(statement, 4, data, -1, nil) != SQLITE_OK{
+        
+        if sqlite3_bind_text(statement, 4, data, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul data: \(errmsg)")
             return
