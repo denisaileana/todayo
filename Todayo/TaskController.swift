@@ -9,6 +9,21 @@ import UIKit
 import SQLite3
 
 class TaskController: UITableViewController {
+    
+    @IBAction func shareButton(_ sender: UIBarButtonItem) {
+        var text = "I am sharing \(todolist.count) task(s):\n"
+        for todo in todolist {
+            text += " * \(todo.task)\n"
+        }
+        let shareController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        
+        //sa nu se strice pe ipad
+        shareController.popoverPresentationController?.sourceView = self.view
+        
+        self.present(shareController, animated: true, completion: nil)
+        
+    }
+    
     //tabelul
     var todolist = [Todo]()
     
