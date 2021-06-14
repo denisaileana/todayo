@@ -55,25 +55,25 @@ class SignupController: UIViewController {
             print("Am esuat la pregatirea inserarii \(errmsg)")
             return
         }
-
+        let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
         //bind-uim parametrii de "?"
-        if sqlite3_bind_text(statement, 1, name, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(statement, 1, name, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul numelui: \(errmsg)")
             return
         }
 
-        if sqlite3_bind_text(statement, 2, lastname, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(statement, 2, lastname, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul prenumelui: \(errmsg)")
             return
         }
-        if sqlite3_bind_text(statement, 3, email, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(statement, 3, email, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul emailului: \(errmsg)")
             return
         }
-        if sqlite3_bind_text(statement, 4, password, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(statement, 4, password, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(Database.shared.db)!)
             print("Am esuat la bindingul parolei: \(errmsg)")
             return
